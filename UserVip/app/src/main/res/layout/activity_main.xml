@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    android:gravity="center"
     android:orientation="vertical"
-    android:gravity="center">
+    tools:context=".MainActivity">
 
     <!-- EditText Nom -->
     <EditText
+        android:id="@+id/etName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Nom"
 
-        android:id="@+id/etName"
+        android:hint="Nom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,29 +35,44 @@
 
     <!-- EditText GitHub -->
     <EditText
+        android:id="@+id/GitHub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="URL gitHub"
 
-        android:id="@+id/GitHub"
+        android:hint="URL gitHub"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
 
         />
 
-    <!-- CheckBox VIP -->
-    <CheckBox
-        android:layout_width="300dp"
+    <RadioGroup
+        android:id="@+id/rgTratements"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/cbVip"/>
+        android:orientation="horizontal">
+
+        <!-- RadioButton Formal -->
+        <RadioButton
+            android:id="@+id/rbFormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Formal" />
+
+        <!-- RadioButton Informal -->
+        <RadioButton
+            android:id="@+id/rbInformal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Informal" />
+    </RadioGroup>
 
     <!-- Button Continuar -->
     <Button
+        android:id="@+id/btnContinuar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnContinuar"
-        android:text="Continuar"/>
+        android:text="Continuar" />
 
 
 </LinearLayout>

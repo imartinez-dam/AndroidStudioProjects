@@ -23,17 +23,26 @@ class ResultActivity : AppCompatActivity() {
         }
         //Agafem el nom
         val userName = prefs.getName()
-        //Mostrem la benvinguda al nom guardat a la BDD
-        binding.tvName.text = "Benvingut $userName"
+        //Agafem els cognoms
+        val userSurname = prefs.getSurname()
+        //Agafem la direcció de GitHub
+        val userGitHub = prefs.getGitHub()
 
-        //Recuperem el VIP
-        if(prefs.getVip())
+
+        //Segons el tracte escollit mostrem un missatge o l'altre
+        if(prefs.getInformal().equals(true))
         {
-            setVIPColorBackground()
+            binding.tvName.text = "Benvingut/da $userName $userSurname"
+            binding.tvGitHub.text = "El teu GitHub és: $userGitHub"
+        }
+        else if(prefs.getFormal().equals(true))
+        {
+            binding.tvName.text = "Nom i cognoms: $userName $userSurname"
+            binding.tvGitHub.text = "GitHub: $userGitHub"
         }
     }
-    fun setVIPColorBackground()
+    /*fun setVIPColorBackground()
     {
         binding.container.setBackgroundColor(ContextCompat.getColor(this,R.color.purple_200))
-    }
+    }*/
 }
