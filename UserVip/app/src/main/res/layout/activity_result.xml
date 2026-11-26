@@ -7,15 +7,22 @@
     tools:context=".ResultActivity"
     android:id="@+id/container"
     android:orientation="vertical">
+    <!-- TextView Nom complet -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tvName"
         tools:text="Benvingut nom" />
+
+    <!-- TextView URL GitHub -->
+    <!-- L'atribut autoLink fa que detecti el text com una URL clickable -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tvGitHub"/>
+        android:id="@+id/tvGitHubURL"
+        android:autoLink="web"/>
+
+    <!-- Botó tancar sessió -->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

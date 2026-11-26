@@ -33,12 +33,12 @@ class ResultActivity : AppCompatActivity() {
         if(prefs.getInformal().equals(true))
         {
             binding.tvName.text = "Benvingut/da $userName $userSurname"
-            binding.tvGitHub.text = "El teu GitHub és: $userGitHub"
+            binding.tvGitHubURL.text = "El teu GitHub és: $userGitHub"
         }
         else if(prefs.getFormal().equals(true))
         {
             binding.tvName.text = "Nom i cognoms: $userName $userSurname"
-            binding.tvGitHub.text = "GitHub: $userGitHub"
+            binding.tvGitHubURL.text = "GitHub: $userGitHub"
         }
     }
     /*fun setVIPColorBackground()

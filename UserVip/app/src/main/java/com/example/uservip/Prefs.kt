@@ -1,6 +1,7 @@
 package com.example.uservip
 
 import android.content.Context
+import java.net.URL
 
 class Prefs(val context: Context) {
     //Necessitem el context de l'aplicació però el context només el tenen les classes propies d'android
