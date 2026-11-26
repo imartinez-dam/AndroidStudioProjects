@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun initUI() {
-        binding.btnContinuar.setOnClickListener { accesToDatail() }
+        binding.btnIniciarSessio.setOnClickListener { accesToDatail() }
     }
 
     //Accedim a les dades guardades
@@ -44,20 +44,21 @@ class MainActivity : AppCompatActivity() {
             //Guardem la URL del GitHub
             prefs.saveGitHub(binding.GitHub.text.toString())
 
-            if(binding.rbInformal.isChecked || binding.rbFormal.isChecked)
-            {
-                //Guardem el informal
+            //Comprovem que hi hagi un tracte seleccionat
+            if (binding.rbInformal.isChecked || binding.rbFormal.isChecked) {
+                //Guardem l'estat del radioButton informal
                 prefs.saveInformal(binding.rbInformal.isChecked)
-                //Guardem el formal
+                //Guardem l'estat del radioButton formal
                 prefs.saveFormal(binding.rbFormal.isChecked)
                 goToDetail()
-            }
-            else{
-                Snackbar.make(binding.root, "El tracte no pot ser buit", Snackbar.LENGTH_SHORT).show()
+            } else {
+                Snackbar.make(binding.root, "S'ha d'escollir un tracte", Snackbar.LENGTH_SHORT)
+                    .show()
             }
         } else {
             //altre
-            Snackbar.make(binding.root, "El nom no pot ser buit", Snackbar.LENGTH_SHORT).show()
+            Snackbar.make(binding.root, "El camp nom no pot estar buit", Snackbar.LENGTH_SHORT)
+                .show()
         }
     }
 

@@ -2,7 +2,7 @@ package com.example.uservip
 
 import android.app.Application
 
-//Aquesta aplicació s'executarà abans que l'activityMaiun
+//Aquesta aplicació s'executarà abans que l'activityMain en cas que hi hagi dades a la base de dades
 class UserVipApplication:Application() {
 
     //crearem una instancia de prefs perquè tothom pugui accedir

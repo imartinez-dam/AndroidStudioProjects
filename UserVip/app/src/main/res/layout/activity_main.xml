@@ -13,8 +13,8 @@
         android:id="@+id/etName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:hint="Nom"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,23 +29,20 @@
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <!-- EditText GitHub -->
     <EditText
         android:id="@+id/GitHub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:hint="URL gitHub"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        />
-
+    <!-- RadioGroup horitzontal pel tracte Formal/Informal per només poder escollir una opció-->
     <RadioGroup
         android:id="@+id/rgTratements"
         android:layout_width="wrap_content"
@@ -67,12 +64,12 @@
             android:text="Informal" />
     </RadioGroup>
 
-    <!-- Button Continuar -->
+    <!-- Button InicarSessio -->
     <Button
-        android:id="@+id/btnContinuar"
+        android:id="@+id/btnIniciarSessio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Continuar" />
+        android:text="Iniciar sessió" />
 
 
 </LinearLayout>

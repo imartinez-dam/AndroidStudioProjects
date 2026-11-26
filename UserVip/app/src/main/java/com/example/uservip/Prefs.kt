@@ -16,7 +16,7 @@ class Prefs(val context: Context) {
     //Instrucció per recuperar les preferències
     val storage = context.getSharedPreferences(SHARED_NAME,0)
 
-    //funcions per guardar
+    //FUNCIONS PER GUARDAR DADES
 
     //Funció per guardar el nom
     fun saveName(name:String){
@@ -47,7 +47,7 @@ class Prefs(val context: Context) {
         storage.edit().putBoolean(SHARED_FORMAL, vip).apply()
     }
 
-    //Funcions per recuperar dades
+    //FUNCIONS PER RECUPERAR DADES
 
     //Funció per recuperar el nom
     fun getName():String{
@@ -60,16 +60,17 @@ class Prefs(val context: Context) {
         return storage.getString(SHARED_USER_SURNAME, "")!!
     }
 
+    //Funció per recuperar la String URL del GitHub
     fun getGitHub():String{
         return storage.getString(SHARED_USER_GITHUB, "")!!
     }
 
-    //Funció per recuperar el informal
+    //Funció per recuperar el radioButton informal
     fun getInformal():Boolean{
         return storage.getBoolean(SHARED_INFORMAL,false)
     }
 
-    //Funció per recuperar el formal
+    //Funció per recuperar el radioButton formal
     fun getFormal():Boolean{
         return storage.getBoolean(SHARED_FORMAL, false)
     }

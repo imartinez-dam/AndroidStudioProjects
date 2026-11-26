@@ -41,8 +41,4 @@ class ResultActivity : AppCompatActivity() {
             binding.tvGitHubURL.text = "GitHub: $userGitHub"
         }
     }
-    /*fun setVIPColorBackground()
-    {
-        binding.container.setBackgroundColor(ContextCompat.getColor(this,R.color.purple_200))
-    }*/
 }
